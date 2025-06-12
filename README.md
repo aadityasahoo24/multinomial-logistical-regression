@@ -5,17 +5,17 @@
 
 A comparative study implementing **multi-class logistic regression from scratch** using **NumPy** against **TensorFlow** and **XGBoost** for weather prediction. Built to deepen understanding of core ML principles and feature engineering.
 
-## 🔍 Key Insights
+##  Key Insights
 
 | Model                          | Feature Engineering | Mean Accuracy (100 runs) |
 |--------------------------------|---------------------|--------------------------|
-| **NumPy (From Scratch)**       | ✅ Yes              | 81.56%                   |
-| TensorFlow                     | ✅ Yes              | 80.54%                   |
-| XGBoost (via TensorFlow)       | ❌ No               | 81.91%                   |
+| **NumPy (From Scratch)**       |  Yes              | 81.56%                   |
+| TensorFlow                     |  Yes              | 80.54%                   |
+| XGBoost (via TensorFlow)       |  No               | 81.91%                   |
 
 **Surprising Finding**: Our manual implementation with feature engineering came within **0.35%** of XGBoost's performance!
 
-## 🛠️ Project Structure
+##   Project Structure
 
 - **`data_imp.py`**: Script to import and preprocess the **seattle-weather.csv** dataset from Kaggle.
 - **`main.py`**: Contains the **NumPy** and **pandas**-based implementation of the multi-class logistic regression model from scratch with **manual gradient ascent** and **softmax regression**.
@@ -24,7 +24,7 @@ A comparative study implementing **multi-class logistic regression from scratch*
 - **`tf_with_fe.py`**: TensorFlow implementation of the weather prediction model with **feature engineering** (cyclical encodings for day and month).
 - **`tf_wo_fe.py`**: TensorFlow implementation of the weather prediction model **without feature engineering** (using raw weather data).
 
-## 🚀 Why Build from Scratch?
+##  Why Build from Scratch?
 
 While libraries like **scikit-learn**, **TensorFlow**, and **XGBoost** offer pre-built solutions, implementing multi-class logistic regression from scratch provides:
 
@@ -32,21 +32,21 @@ While libraries like **scikit-learn**, **TensorFlow**, and **XGBoost** offer pre
 - **Debugging and troubleshooting**: Build your understanding of issues such as softmax instability and numerical overflows, which are difficult to catch in black-box frameworks.
 - **Total customization**: Customize the model, loss functions, and gradients, and experiment with different approaches for feature engineering.
 
-## ⚡ Performance Comparison
+##  Performance Comparison
 
 The models were tested on the same dataset and ran 100 randomized training tests. The models' performance is compared based on the **mean accuracy over 100 runs**:
 
 | Model                          | Feature Engineering | Mean Accuracy (100 runs) |
 |--------------------------------|---------------------|--------------------------|
-| **NumPy (From Scratch)**       | ✅ Yes              | 81.56%                   |
-| TensorFlow                     | ✅ Yes              | 80.54%                   |
-| XGBoost (via Tensorflow) | ❌ No               | 81.91%                   |
+| **NumPy (From Scratch)**       |  Yes              | 81.56%                   |
+| TensorFlow                     |  Yes              | 80.54%                   |
+| XGBoost (via Tensorflow) |  No               | 81.91%                   |
 
 ### Key Takeaways:
 - **Manual models can be competitive**: The **NumPy-based from-scratch model** performed just **0.35%** below **XGBoost**.
 - **Feature engineering matters**: Our **manual NumPy model with feature engineering** outperformed **TensorFlow** with the same features, showcasing the impact of proper feature engineering.
 
-## 🧩 Key Challenges & Solutions
+##  Key Challenges & Solutions
 
 ### 1. **Softmax Instability**
 In logistic regression, the **softmax function** can become unstable due to large values in the logits. To avoid **numerical overflow**, I shifted the logits before exponentiation:
@@ -72,7 +72,7 @@ df['day_sin'] = np.sin(2 * np.pi * df['day'] / 30)
 df['day_cos'] = np.cos(2 * np.pi * df['day'] / 30)
 ```
 
-## 📊 Lessons Learned
+##  Lessons Learned
 
 - **Math over Magic**: Frameworks abstract away many implementation details, but building the model from scratch gives you a deeper understanding of the algorithm and helps in debugging.
 
@@ -80,6 +80,6 @@ df['day_cos'] = np.cos(2 * np.pi * df['day'] / 30)
 
 - **Feature Engineering = Free Lunch**: Hand-engineered features significantly improved model performance, closing the gap with **XGBoost**.
 
-## 🔗 Try It Yourself
+##  Try It Yourself
 
 The full code is available in this repository. Feel free to experiment with different models, tweak parameters, or contribute optimizations.
