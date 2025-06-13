@@ -19,7 +19,8 @@ A comparative study implementing **multi-class logistic regression from scratch*
 
 - **`data_imp.py`**: Script to import and preprocess the **seattle-weather.csv** dataset from Kaggle.
 - **`main.py`**: Contains the **NumPy** and **pandas**-based implementation of the multi-class logistic regression model from scratch with **manual gradient ascent** and **softmax regression**.
-- **`results.py`**: Runs the chosen model **100 times**, randomizes the samples, and calculates the **mean accuracy** to evaluate stability and performance.
+- **`res.py`**: Runs the chosen model **100 times**, randomizes the samples, and calculates the **mean accuracy** to evaluate stability and performance.
+- **`model.py`**: Used to create the functions used in `res.py`. Allows all 3 models to run 100 times to get the mean accuracy.
 - **`seattle-weather.csv`**: A dataset containing historical weather data for Seattle, which includes features like **temperature**, **precipitation**, and **wind**.
 - **`tf_with_fe.py`**: TensorFlow implementation of the weather prediction model with **feature engineering** (cyclical encodings for day and month).
 - **`tf_wo_fe.py`**: TensorFlow implementation of the weather prediction model **without feature engineering** (using raw weather data).
