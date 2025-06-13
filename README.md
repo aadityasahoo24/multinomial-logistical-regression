@@ -1,7 +1,7 @@
 # Seattle Weather Classification: From-Scratch vs. Frameworks
 
 ![Python](https://img.shields.io/badge/Python-3.11.0%2B-blue)
-![License](https://img.shields.io/badge/License-OpenSource-green)
+![License](https://img.shields.io/badge/License-GPLv3.0-green)
 
 A comparative study implementing **multi-class logistic regression from scratch** using **NumPy** against **TensorFlow** and **XGBoost** for weather prediction. Built to deepen understanding of core ML principles and feature engineering.
 
